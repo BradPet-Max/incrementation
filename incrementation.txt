@@ -1,0 +1,29 @@
+1.1 - Why is 1 + n = n not valid, but n = n + 1 is?
+
+
+In programming, the "=" symbol is an ASSIGNMENT operator, not amathematical equals sign. 
+It means: "evaluate the right-hand side,then store the result in the variable on the left-hand side."
+The LEFT-hand side must always be a variable (a storage location).
+The RIGHT-hand side is an expression to be evaluated.
+
+1 + n = n   (INVALID)
+
+The left-hand side "1 + n" is an EXPRESSION, not a variable.
+You cannot assign a value to an expression -- there is nowhereto store the result. 
+Python raises a SyntaxError because only a variable name may appear on the left of "=".
+
+n = n + 1   (VALID)
+
+The left-hand side "n" is a variable -- a valid storage location.
+The right-hand side "n + 1" is evaluated first (current value of
+n plus 1), and the result is then stored back into n.
+This is a very common pattern used to increment a variable.
+
+In summary: the left side of "=" must always be a variable thatcan receive and store a value.
+An expression like "1 + n" is not a variable and cannot be assigned to.
+
+Example:
+n = 5
+n = n + 1   -> n is now 6  
+1 + n = n   -> SyntaxError 
+
